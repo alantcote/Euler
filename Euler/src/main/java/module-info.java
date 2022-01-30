@@ -1,5 +1,5 @@
 module euler {
-	exports net.sf.cotelab.euler;
+	exports io.github.alantcote.euler;
 	
 	requires clutilities;
 }
