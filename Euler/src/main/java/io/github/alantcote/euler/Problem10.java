@@ -3,12 +3,14 @@ package io.github.alantcote.euler;
 import net.sf.cotelab.util.math.Primes;
 
 /**
- * A solution for Project Euler Problem 10.
- * The problem statement is
+ * A solution for Project Euler Problem 10. The problem statement is
  * <a href="http://projecteuler.net/problem=10">here</a>.
+ * 
  * @author Al Cote'
  */
 public class Problem10 {
+	public static long LIMIT = 2000000;
+
 	/**
 	 * @param args unused.
 	 */
@@ -24,10 +26,8 @@ public class Problem10 {
 		for (long p = Primes.FIRST_PRIME; p < LIMIT; p = primes.nextPrime(p)) {
 			sum += p;
 		}
-		
+
 		// 142913828922
 		System.out.println("sum = " + sum);
 	}
-
-	public static long LIMIT = 2000000;
 }

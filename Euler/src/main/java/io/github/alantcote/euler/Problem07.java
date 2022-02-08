@@ -3,12 +3,14 @@ package io.github.alantcote.euler;
 import net.sf.cotelab.util.math.Primes;
 
 /**
- * A solution for Project Euler Problem 7.
- * The problem statement is
+ * A solution for Project Euler Problem 7. The problem statement is
  * <a href="http://projecteuler.net/problem=7">here</a>.
+ * 
  * @author Al Cote'
  */
 public class Problem07 {
+	public static int NBR_PRIMES = 10001;
+
 	/**
 	 * @param args unused.
 	 */
@@ -23,10 +25,8 @@ public class Problem07 {
 			candidate = primes.nextPrime(lastPrime);
 			++count;
 		}
-		
+
 		// 104743
 		System.out.println("prime " + NBR_PRIMES + " = " + lastPrime);
 	}
-
-	public static int NBR_PRIMES = 10001;
 }
