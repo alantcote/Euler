@@ -34,7 +34,7 @@ public class Problem4 {
 
 		System.out.println("highPalindrome = " + result.highPalindrome);
 		System.out.println("factorA = " + result.factorA);
-		System.out.println("factorB = " + result.factorB);
+		System.out.println("c = " + result.factorB);
 	}
 
 	/**
