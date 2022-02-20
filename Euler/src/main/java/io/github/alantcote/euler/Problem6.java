@@ -12,7 +12,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 25164150 = 25502500 - 338350.
+ * The verified correct result is 25164150 = 25502500 - 338350.
  */
 public class Problem6 {
 	/**

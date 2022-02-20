@@ -12,7 +12,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 6857.
+ * The verified correct result is 6857.
  */
 public class Problem3 {
 	public static final long COMPOSITE = 600851475143L;

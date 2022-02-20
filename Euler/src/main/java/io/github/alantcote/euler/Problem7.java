@@ -13,7 +13,7 @@ import io.github.alantcote.euler.utils.Primes;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 104743.
+ * The verified correct result is 104743.
  */
 public class Problem7 {
 	/**

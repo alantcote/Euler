@@ -11,7 +11,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 232792560.
+ * The verified correct result is 232792560.
  */
 public class Problem5 {
 	/**

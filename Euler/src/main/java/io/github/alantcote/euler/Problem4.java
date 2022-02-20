@@ -11,7 +11,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 906609 (factors 913 and 993).
+ * The verified correct result is 906609 (factors 913 and 993).
  */
 public class Problem4 {
 

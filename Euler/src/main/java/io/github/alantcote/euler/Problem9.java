@@ -11,7 +11,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 31875000 = 200 * 375 * 425.
+ * The verified correct result is 31875000 = 200 * 375 * 425.
  */
 public class Problem9 {
 	public class Result {

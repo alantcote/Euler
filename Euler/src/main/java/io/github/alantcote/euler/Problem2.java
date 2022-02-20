@@ -12,7 +12,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 4613732.
+ * The verified correct result is 4613732.
  */
 public class Problem2 {
 	public static final int LIMIT = 4000000;

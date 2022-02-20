@@ -19,7 +19,7 @@ package io.github.alantcote.euler;
  * 
  * <b>Spoiler Alert</b>
  * 
- * The desired result is 233168.
+ * The verified correct result is 233168.
  */
 public class Problem1 {
 	public static final int LIMIT = 1000;
