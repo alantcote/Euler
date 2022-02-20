@@ -4,9 +4,16 @@ package io.github.alantcote.euler;
  * A solution for Project Euler Problem 9. The problem statement is
  * <a href="http://projecteuler.net/problem=9">here</a>.
  * 
- * @author Al Cote'
+ * The succinct problem statement is "There exists exactly one Pythagorean
+ * triplet (a*a + b*b = c*c) for which a + b + c = 1000. Find the product abc."
+ * 
+ * We'll use brute force.
+ * 
+ * <b>Spoiler Alert</b>
+ * 
+ * The desired result is 31875000 = 200 * 375 * 425.
  */
-public class Problem09 {
+public class Problem9 {
 
 	/**
 	 * @param args unused.

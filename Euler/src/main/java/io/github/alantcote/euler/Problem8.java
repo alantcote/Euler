@@ -4,7 +4,9 @@ package io.github.alantcote.euler;
  * A solution for Project Euler Problem 8. The problem statement is
  * <a href="http://projecteuler.net/problem=8">here</a>.
  * 
- * The succinct problem statement is "Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?"
+ * The succinct problem statement is "Find the thirteen adjacent digits in the
+ * 1000-digit number that have the greatest product. What is the value of this
+ * product?"
  * 
  * We'll use brute force.
  * 
