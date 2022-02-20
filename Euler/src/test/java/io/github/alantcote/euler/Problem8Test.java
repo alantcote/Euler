@@ -14,8 +14,8 @@ public class Problem8Test {
 	 */
 	@Test
 	public void testLargestProduct() {
-		assertEquals(5832, Problem8.largestProduct(Problem8.THOUSAND_DIGITS, 4));
-		assertEquals(2091059712, Problem8.largestProduct(Problem8.THOUSAND_DIGITS, Problem8.WINDOW_SIZE));
+		assertEquals(5832L, Problem8.largestProduct(Problem8.THOUSAND_DIGITS, 4));
+		assertEquals(23514624000L, Problem8.largestProduct(Problem8.THOUSAND_DIGITS, Problem8.WINDOW_SIZE));
 	}
 
 	/**
