@@ -1,2 +1,3 @@
 module:euler
 io.github.alantcote.euler
+io.github.alantcote.euler.utils

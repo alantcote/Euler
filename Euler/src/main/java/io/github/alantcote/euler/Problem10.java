@@ -1,6 +1,6 @@
 package io.github.alantcote.euler;
 
-import net.sf.cotelab.util.math.Primes;
+import io.github.alantcote.euler.utils.Primes;
 
 /**
  * A solution for Project Euler Problem 10. The problem statement is

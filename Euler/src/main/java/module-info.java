@@ -1,5 +1,4 @@
 module euler {
 	exports io.github.alantcote.euler;
-	
-	requires clutilities;
+	exports io.github.alantcote.euler.utils;
 }

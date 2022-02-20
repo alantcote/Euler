@@ -3,26 +3,26 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>net.sf.cotelab</groupId>
-	<artifactId>Euler</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<groupId>io.github.alantcote</groupId>
+	<artifactId>euler</artifactId>
+	<version>0.2.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>${project.groupId}:${project.artifactId}</name>
-	<url>https://github.com/alantcote</url>
+	<url>https://github.com/alantcote/Euler</url>
 
 	<licenses>
 		<license>
-			<name>The Apache License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<name>The MIT License</name>
+			<url>https://github.com/alantcote/Euler/blob/master/LICENSE</url>
 		</license>
 	</licenses>
 
 	<developers>
 		<developer>
-			<name>Alan T. Cote'</name>
+			<name>Alan T. Coté</name>
 			<email>alantcote@gmail.com</email>
-			<organization>Cote' Lab</organization>
+			<organization>alantcote</organization>
 			<organizationUrl>https://github.com/alantcote</organizationUrl>
 		</developer>
 	</developers>
@@ -46,7 +46,7 @@
 	<description>Solutions for some of the problems posed by Project Euler (http://projecteuler.net/).</description>
 
 	<organization>
-		<name>Cote' Lab</name>
+		<name>alantcote</name>
 		<url>https://github.com/alantcote</url>
 	</organization>
 
@@ -59,7 +59,7 @@
 
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/alantcote/issues</url>
+		<url>https://github.com/alantcote/Euler/issues</url>
 	</issueManagement>
 
 	<repositories>
@@ -207,58 +207,10 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>net.bytebuddy</groupId>
-			<artifactId>byte-buddy</artifactId>
-			<version>1.12.6</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-			<version>3.3.0</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>net.sf.cotelab</groupId>
-			<artifactId>CLUtilities</artifactId>
-			<version>0.1.0-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-core</artifactId>
-			<version>2.2</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hamcrest</groupId>
-			<artifactId>hamcrest-library</artifactId>
-			<version>2.2</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jmock</groupId>
-			<artifactId>jmock-imposters</artifactId>
-			<version>2.12.0</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jmock</groupId>
-			<artifactId>jmock-legacy</artifactId>
-			<version>2.12.0</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13.2</version>
-			<scope>provided</scope>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

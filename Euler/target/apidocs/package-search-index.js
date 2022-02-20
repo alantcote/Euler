@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"euler","l":"io.github.alantcote.euler"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"euler","l":"io.github.alantcote.euler"},{"m":"euler","l":"io.github.alantcote.euler.utils"}];updateSearchResults();
