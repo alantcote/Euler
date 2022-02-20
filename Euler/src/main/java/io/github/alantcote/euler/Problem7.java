@@ -25,20 +25,24 @@ public class Problem7 {
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
+		System.out.println("prime " + NBR_PRIMES + " = " + nthPrime(NBR_PRIMES));
+	}
+
+	public static long nthPrime(int n) {
 		/**
 		 * A prime number calculator. See {@link Primes}.
 		 */
 		Primes primes = new Primes();
 		int count = 1;
-		long candidate = 3;
+		long candidate = 2;
 		long lastPrime = 0;
 
-		while (count < NBR_PRIMES) {
+		while (count < n) {
 			lastPrime = candidate;
 			candidate = primes.nextPrime(lastPrime);
 			++count;
 		}
 
-		System.out.println("prime " + NBR_PRIMES + " = " + lastPrime);
+		return candidate;
 	}
 }

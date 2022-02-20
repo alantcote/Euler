@@ -47,7 +47,10 @@ public class Problem4Test {
 	 */
 	@Test
 	public void testIsPalindrome() {
-		fail("Not yet implemented");
+		Problem4 fixture = new Problem4();
+		
+		assertFalse(fixture.isPalindrome(211));
+		assertTrue(fixture.isPalindrome(212));
 	}
 
 	/**
@@ -63,7 +66,10 @@ public class Problem4Test {
 	 */
 	@Test
 	public void testNbrDigits() {
-		fail("Not yet implemented");
+		Problem4 fixture = new Problem4();
+		
+		assertEquals(3, fixture.nbrDigits(123));
+		assertEquals(7, fixture.nbrDigits(1234567));
 	}
 
 }

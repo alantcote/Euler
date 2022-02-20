@@ -17,30 +17,30 @@ public class Problem5 {
 	/**
 	 * The minimum candidate. This must be a factor of any solution.
 	 */
-	public static final long BASE = 2520L;
+	public static final long BASE = 2L;
 
 	/**
-	 * The maximum factor.
+	 * The maximum factor to check.
 	 */
 	public static final long MAX = 20L;
 
 	/**
-	 * The minimum factor to check. By checking only multiples of BASE, we avoid
-	 * needing to check 2-10.
+	 * The minimum factor to check.
 	 */
-	public static final long MIN = 11L;
+	public static final long MIN = 2L;
 
 	/**
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
-		for (long candidate = BASE; true; candidate += BASE) {
-			if (satisfiesRange(candidate, MIN, MAX)) {
-				System.out.println(candidate);
-
-				break;
-			}
-		}
+//		for (long candidate = BASE; true; candidate += BASE) {
+//			if (satisfiesRange(candidate, MIN, MAX)) {
+//				System.out.println(candidate);
+//
+//				break;
+//			}
+//		}
+		System.out.println(smallestMultiple(MIN, MAX));
 	}
 
 	/**
@@ -60,5 +60,19 @@ public class Problem5 {
 		}
 
 		return true;
+	}
+
+	public static long smallestMultiple(long min, long max) {
+		long result = Long.MAX_VALUE;
+
+		for (long candidate = 1L; candidate <= Long.MAX_VALUE; ++candidate) {
+			if (satisfiesRange(candidate, min, max)) {
+				result = candidate;
+
+				break;
+			}
+		}
+
+		return result;
 	}
 }

@@ -21,6 +21,22 @@ public class Problem6 {
 	public static final int N = 100;
 
 	/**
+	 * Calculate the sum of the first few terms of an arithmetic progression.
+	 * 
+	 * @param a the first term of the progression.
+	 * @param d the difference between successive terms.
+	 * @param n the number of terms to sum.
+	 * @return the sum.
+	 */
+	public static int arithProgSum(int a, int d, int n) {
+		int sum;
+
+		sum = (n * ((2 * a) + (n - 1) * d)) / 2;
+
+		return sum;
+	}
+
+	/**
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
@@ -52,22 +68,6 @@ public class Problem6 {
 	 */
 	public static int sumOfSquares(int n) {
 		int sum = n * (n + 1) * ((2 * n) + 1) / 6;
-
-		return sum;
-	}
-
-	/**
-	 * Calculate the sum of the first few terms of an arithmetic progression.
-	 * 
-	 * @param a the first term of the progression.
-	 * @param d the difference between successive terms.
-	 * @param n the number of terms to sum.
-	 * @return the sum.
-	 */
-	public static int arithProgSum(int a, int d, int n) {
-		int sum;
-
-		sum = (n * ((2 * a) + (n - 1) * d)) / 2;
 
 		return sum;
 	}
