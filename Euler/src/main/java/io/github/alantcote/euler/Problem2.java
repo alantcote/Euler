@@ -1,6 +1,3 @@
-/**
- * 
- */
 package io.github.alantcote.euler;
 
 /**
@@ -26,7 +23,7 @@ public class Problem2 {
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
-		System.out.println("sum = " + solution());
+		System.out.println("sum = " + solution(LIMIT));
 	}
 
 	/**
@@ -34,13 +31,13 @@ public class Problem2 {
 	 * 
 	 * @return the solution.
 	 */
-	public static int solution() {
+	public static int solution(int limit) {
 		int sum = 2;
 		int older = 1;
 		int old = 2;
 		int newest;
 
-		while ((newest = older + old) <= LIMIT) {
+		while ((newest = older + old) <= limit) {
 			if ((newest % 2) == 0) {
 				sum += newest;
 			}

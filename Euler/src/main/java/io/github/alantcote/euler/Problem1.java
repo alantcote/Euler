@@ -23,7 +23,6 @@ package io.github.alantcote.euler;
  */
 public class Problem1 {
 	public static final int LIMIT = 1000;
-	public static final int LIMIT_MINUS_1 = LIMIT - 1;
 
 	/**
 	 * Calculate the sum of the first few terms of an arithmetic progression.
@@ -47,22 +46,25 @@ public class Problem1 {
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
-		System.out.println("sum = " + solution());
+		System.out.println("sum = " + solution(LIMIT));
 	}
 
 	/**
 	 * Calculate the solution to the posed problem.
 	 * 
+	 * @param limit all terms of the progressions must be less than this.
 	 * @return the solution.
 	 */
-	public static int solution() {
-		int nTerms3 = LIMIT_MINUS_1 / 3;
+	public static int solution(int limit) {
+		int limitMinus1 = limit - 1;
+
+		int nTerms3 = limitMinus1 / 3;
 		int sum3 = arithProgSum(3, 3, nTerms3);
 
-		int nTerms5 = LIMIT_MINUS_1 / 5;
+		int nTerms5 = limitMinus1 / 5;
 		int sum5 = arithProgSum(5, 5, nTerms5);
 
-		int nTerms15 = LIMIT_MINUS_1 / 15;
+		int nTerms15 = limitMinus1 / 15;
 		int sum15 = arithProgSum(15, 15, nTerms15);
 
 		int sum = sum3 + sum5 - sum15;

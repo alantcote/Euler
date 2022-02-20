@@ -15,13 +15,35 @@ package io.github.alantcote.euler;
  */
 public class Problem4 {
 
+	public class Result {
+		public int highPalindrome, factorA, factorB;
+
+		public Result(int highPalindrome, int factorA, int factorB) {
+			this.highPalindrome = highPalindrome;
+			this.factorA = factorA;
+			this.factorB = factorB;
+		}
+	}
+
+	/**
+	 * @param args unused.
+	 */
+	public static void main(String[] args) {
+		Problem4 p4 = new Problem4();
+		Result result = p4.highestPalindrome(100, 999);
+
+		System.out.println("highPalindrome = " + result.highPalindrome);
+		System.out.println("factorA = " + result.factorA);
+		System.out.println("factorB = " + result.factorB);
+	}
+
 	/**
 	 * Find the digits of an integer value.
 	 * 
 	 * @param val the integer value.
 	 * @return an array of the digits.
 	 */
-	public static int[] digits(int val) {
+	public int[] digits(int val) {
 		int count = nbrDigits(val);
 		int[] theDigits = new int[count];
 
@@ -37,13 +59,37 @@ public class Problem4 {
 		return theDigits;
 	}
 
+	public Result highestPalindrome(int minFactor, int maxFactor) {
+		int iHigh = 0;
+		int jHigh = 0;
+		int pHigh = -1;
+
+		for (int i = minFactor; i <= maxFactor; ++i) {
+			for (int j = minFactor; j < maxFactor; ++j) {
+				int candidate = i * j;
+
+				if (candidate > pHigh) {
+					if (isPalindrome(candidate)) {
+						iHigh = i;
+						jHigh = j;
+						pHigh = candidate;
+					}
+				}
+			}
+		}
+
+		Result result = new Result(pHigh, iHigh, jHigh);
+
+		return result;
+	}
+
 	/**
 	 * Ascertain whether a given value is a palindrome.
 	 * 
 	 * @param val the given value to be tested.
 	 * @return true if and only if the value is a palindrome.
 	 */
-	public static boolean isPalindrome(int val) {
+	public boolean isPalindrome(int val) {
 		int[] digit = digits(val);
 		boolean result = true;
 		int count = digit.length;
@@ -61,39 +107,12 @@ public class Problem4 {
 	}
 
 	/**
-	 * @param args unused.
-	 */
-	public static void main(String[] args) {
-		int iHigh = 0;
-		int jHigh = 0;
-		int pHigh = -1;
-
-		for (int i = 900; i < 1000; ++i) {
-			for (int j = 900; j < 1000; ++j) {
-				int candidate = i * j;
-
-				if (isPalindrome(candidate)) {
-					if (candidate > pHigh) {
-						iHigh = i;
-						jHigh = j;
-						pHigh = candidate;
-					}
-				}
-			}
-		}
-
-		System.out.println("pHigh = " + pHigh);
-		System.out.println("iHigh = " + iHigh);
-		System.out.println("jHigh = " + jHigh);
-	}
-
-	/**
 	 * Find out how many digits (base 10) are in a given number.
 	 * 
 	 * @param val the given number.
 	 * @return the number of digits.
 	 */
-	public static int nbrDigits(int val) {
+	public int nbrDigits(int val) {
 		return 1 + (int) Math.log10(val);
 	}
 }
