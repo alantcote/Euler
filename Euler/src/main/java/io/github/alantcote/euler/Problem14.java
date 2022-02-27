@@ -12,10 +12,23 @@ public class Problem14 {
 	 * @param args unused.
 	 */
 	public static void main(String[] args) {
-		long longestLength = 0;
-		long longestStartTerm = 0;
+		Problem14 app = new Problem14();
 
-		for (long startTerm = 1; startTerm < 1000000; ++startTerm) {
+		app.calculate(1000000);
+
+		// 837799, 525
+		System.out
+				.println("Starting term " + app.longestStartTerm + " yields a sequence of length " + app.longestLength);
+		// 56991483520
+		System.out.println("Largest term discovered = " + app.largestTerm);
+	}
+
+	public long largestTerm = 0;
+	public long longestLength = 0;
+	public long longestStartTerm = 0;
+
+	public void calculate(long limit) {
+		for (long startTerm = 1; startTerm < limit; ++startTerm) {
 			long length = collatzSeqLen(startTerm);
 
 			if (length > longestLength) {
@@ -23,21 +36,23 @@ public class Problem14 {
 				longestStartTerm = startTerm;
 			}
 		}
-
-		System.out.println("Starting term " + longestStartTerm + " yields a sequence of length " + longestLength);
 	}
 
-	private static long collatzSeqLen(long startTerm) {
+	public long collatzSeqLen(long startTerm) {
 		long length = 1;
 
 		for (long term = startTerm; term != 1; term = nextCollatzTerm(term)) {
 			++length;
+
+			if (term > largestTerm) {
+				largestTerm = term;
+			}
 		}
 
 		return length;
 	}
 
-	private static long nextCollatzTerm(long term) {
+	public long nextCollatzTerm(long term) {
 		long nextTerm;
 
 		if (term % 2 == 0) {
